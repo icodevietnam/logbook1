@@ -26,27 +26,42 @@
         <link rel="stylesheet" type="text/css" href="css/index.css">
         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
-        <title>Page Common</title>
-    </head>
-    <body>
-    <div class="app">
-        <form class="form-horizontal">
-        <div class="form-group">
-            <button class='local btn btn-primary btn-lg' onClick=""> Insert Bird </button>
-        </div>
-        <div class="form-group">
-            <button class='local btn btn-primary btn-lg' onClick="">List Bird and Action</button>
-        </div>
-        </form>
-    </div>
+        <title>LogBook1</title>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/jquery.js"></script>
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
-        <script type="text/javascript">
-		    function ClientSideMethod(message){
-			    var x=document.getElementById("te");
-  				x.innerHTML = message;
-		    }
-	    </script>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+    </head>
+    <body>
+    <div class="app" style="top:50px;">
+        <img width="50px" height="60px" class="logo" src="img/gw_logo.png" style="display:block;margin:auto" />
+        <button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Show Action</button>
+
+        <div style="margin-top:20px;" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">Basic Notification</h4>
+                    </div>
+                    <div class="modal-body">
+                    <br>
+                    <br>
+                    <button class="btn btn-primary" >Ring A Bell</button>
+                    <br>
+                    <br>
+                    <button class="btn btn-primary" >Vibrate</button>
+                    <br>
+                    <br>
+                        </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     </body>
 </html>
