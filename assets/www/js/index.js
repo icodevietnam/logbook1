@@ -48,25 +48,16 @@ var app = {
     },
     onDeviceReady: function() {
          window.plugins.toast.showLongBottom('Use the back button to return to main.');
-         document.getElementById("btnAdd").addEventListener("click", app.addItem);
-         document.getElementById("btnToast").addEventListener("click", app.showToast);
-         document.getElementById("btnDeviceInfo").addEventListener("click", app.showDeviceInfo);
+         document.getElementById("viberate").addEventListener("click", app.viberate);
+         document.getElementById("ring").addEventListener("click", app.ring);
          document.getElementById("btnUrl").addEventListener("click", app.openWeb);
          app.receivedEvent('deviceready');
       },
-    addItem: function() {
-        console.log("Plugin ADD ITEM CALLED " + HybridBridge);
-        var item = document.getElementById("bookmark").value;
-        HybridBridge.addItem(item,function(){console.log("Hybrid Bridge Success")},function(e){console.log("Hybrid Bridge Error" + e)});
+     viberate : function(){
+        navigator.notification.vibrate(3000);
      },
-     showDeviceInfo: function(){
-        var message = 'Cordova version: ' + device.cordova;
-        message += '\n\nDevice Model: ' + device.model;
-        message += '\n\nDevice Version (Android): ' + device.version;
-        alert(message);
-     },
-     showToast: function(){
-        window.plugins.toast.showShortCenter('PHONEGAP IS AWESOME!!!');
+     ring : function(){
+        navigator.notification.beep(2);
      },
      openWeb: function(){
         var url = "http://phonegap.com"
