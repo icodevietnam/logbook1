@@ -34,7 +34,7 @@ public class MainActivity extends CordovaActivity
         super.onCreate(savedInstanceState);
         // Set by <content src="index.html" /> in config.xml
         //loadUrl(launchUrl);
-        setContentView(R.layout.activity_main);
+        //setContentView(R.layout.activity_main);
         super.loadUrl(Config.getStartUrl());
     }
 }
